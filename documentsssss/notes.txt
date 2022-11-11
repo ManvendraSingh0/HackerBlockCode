@@ -1,0 +1,6 @@
+ recursion relation==>>
+fact,power,PI,PD,arr 1st index and last index;
+fabnocci=2^n==>>complexity
+in recursion if there are more than two calls than colpexity is exponential(in term of no. of calls)
+if there are 3 recursion call then complexity is 3^n;
+ 
