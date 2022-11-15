@@ -7,7 +7,7 @@ public class replacePi {
        String s1="";
        for(int p=0;p<3;p++)
        {
-        String s=in.nextLine();
+         s=in.nextLine();
          s1="";          
         REplacePi(s, s1, 0);
        }

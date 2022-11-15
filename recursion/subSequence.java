@@ -6,7 +6,7 @@ public class subSequence {
     public static void printPermutation(String ques, String ans) {
         if(ques.length()==0)
         {
-            System.out.print(ans + " ");
+            System.out.println(ans + "");
             return;
         }
         char ch=ques.charAt(0);
