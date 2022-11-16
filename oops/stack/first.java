@@ -1,4 +1,4 @@
-package DSA.stack;
+package oops.stack;
 
 import java.util.Stack;
 

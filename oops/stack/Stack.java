@@ -1,4 +1,4 @@
-package oops.DSA.stack;
+package oops.stack;
 
 public class Stack {
     private int [] arr;
