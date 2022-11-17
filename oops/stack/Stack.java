@@ -1,8 +1,8 @@
 package oops.stack;
 
 public class Stack {
-    private int [] arr;
-    private int top;
+    protected int [] arr;
+    private int top;//it can be inherited but private can not be inherited;
     public Stack()
     {
         arr = new int[5];
