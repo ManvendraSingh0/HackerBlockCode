@@ -4,7 +4,7 @@ public class Queue {
     private int [] arr;
     private int front=0;
     private int size=0;
-    int rear=0;
+   int rear=-1;
     public Queue()
     {
         arr =new int[5];
@@ -28,6 +28,7 @@ public class Queue {
             throw new Exception("Overflow");
         }
         arr[(size+front)%arr.length]=item;
+        rear = (rear + 1) % arr.length;
         size++;
     }
     public int dequeue() throws Exception
@@ -37,15 +38,19 @@ public class Queue {
             throw new Exception("Overflow");
         }
         
-        int rv =arr[front];
+        int ed =arr[front];
         front=(front+1)%arr.length;
         size--;
-        return rv;
+        return ed;
     }
     public int getFront()
     {
         int rv =arr[front];
         return rv;
+    }
+    public int size()
+    {
+        return size;
     }
     public void display()
     {
@@ -55,6 +60,10 @@ public class Queue {
             System.out.print(arr[idx]+" ");
         }
     }
+    public int rear()
+    {
+        return arr[rear];
+    }
     public static void main(String[] args) throws Exception {
         Queue q = new Queue();
         q.Enqueue(10);
@@ -62,7 +71,9 @@ public class Queue {
         q.Enqueue(30);
         q.Enqueue(40);
         q.Enqueue(50);
+        System.out.println(q.size());
         System.out.println(q.dequeue());
+        System.out.println(q.rear());
         q.display();
     }
 }
