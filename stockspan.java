@@ -9,17 +9,19 @@ public class stockspan {
         Stack<Integer> st=new Stack(); ///in this we put the  index of arrays element;
         for(int i=0;i<n;i++)
         {
-            while(!st.isEmpty() && arr[i]>arr[st.peek()]){
-           st.pop();
+            while(!st.isEmpty() && arr[i]>arr[st.peek()])
+            {
+                st.pop();
            
-        }
-        if(!st.isEmpty()){
-            ans[i]=i- st.peek(); 
-        }
-        else
-        {
-            ans[i]=i+1;
-        }
+            }
+            if(!st.isEmpty()){
+                ans[i]=i- st.peek(); 
+                st.pop();
+            }
+            else
+            {
+                ans[i]=i+1;
+            }
         st.push(i);
         
     }
